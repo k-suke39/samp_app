@@ -5,7 +5,7 @@ RSpec.describe "StaticPages", type: :system do
     driven_by(:rack_test)
   end
 
-    describe 'root' do
+  describe 'root' do
     it 'root_pathへのリンクが2つ、help, about, contactへのリンクが表示されていること' do
       visit root_path
       link_to_root = page.find_all("a[href=\"#{root_path}\"]")
